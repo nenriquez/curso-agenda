@@ -16,7 +16,7 @@ public class Contact implements Serializable {
 	private String image;
 	
 	public Contact(String name, String surname, String phone, String phoneType, String image) {
-		this.name =name;
+		this.name = name;
 		this.surname = surname;
 		this.phone = phone;
 		this.phoneType = phoneType;

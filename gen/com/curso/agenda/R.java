@@ -25,10 +25,9 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
+        public static final int action_settings=0x7f08000f;
         public static final int add=0x7f080000;
         public static final int grid=0x7f080002;
-        public static final int icon=0x7f08000d;
         public static final int imageView=0x7f080008;
         public static final int img=0x7f08000a;
         public static final int inputImage=0x7f080007;
@@ -39,8 +38,8 @@ public final class R {
         public static final int list=0x7f080001;
         public static final int name=0x7f08000b;
         public static final int ok=0x7f080009;
-        public static final int phone=0x7f08000f;
-        public static final int phoneType=0x7f08000e;
+        public static final int phone=0x7f08000e;
+        public static final int phoneType=0x7f08000d;
         public static final int surname=0x7f08000c;
     }
     public static final class layout {

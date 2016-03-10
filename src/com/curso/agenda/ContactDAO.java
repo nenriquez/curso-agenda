@@ -70,10 +70,21 @@ public class ContactDAO {
 	}
 
 	public Cursor getAll() {
-		Cursor c = db.query(TABLE_CONTACTS, new String[] {KEY_ID, KEY_NAME, KEY_SURNAME, KEY_PHONE, KEY_PHONE_TYPE, KEY_IMG}, null, null, null, null, null);
+		Cursor c = db.query(TABLE_CONTACTS, new String[] {KEY_ID, KEY_NAME, KEY_SURNAME, KEY_PHONE_TYPE, KEY_PHONE, KEY_IMG}, null, null, null, null, null);
+//		Cursor c = db.query(TABLE_CONTACTS, null, null, null, null, null, null);
+//		Cursor c = db.rawQuery("SELECT _id, name, surname, phone, phone_type, image FROM CONTACTS", null);
 		if (c != null) {
 			c.moveToFirst();
+
+//			int campo0 = c.getInt(0);
+//			String campo1 = c.getString(1);
+//			String campo2 = c.getString(2);
+//			String campo3 = c.getString(3);
+//			String campo4 = c.getString(4);
+//			String campo5 = c.getString(5);
+//			int oo = c.getColumnIndex("image");
 		}
+		
 		return c;
 	}
 
@@ -83,7 +94,7 @@ public class ContactDAO {
 		values.put(KEY_SURNAME, surname);
 		values.put(KEY_PHONE, phone);
 		values.put(KEY_PHONE_TYPE, phoneType);
-		values.put(KEY_PHONE_TYPE, img);
+		values.put(KEY_IMG, img);
 		return db.insert(TABLE_CONTACTS, null, values);
 	}
 
@@ -93,7 +104,7 @@ public class ContactDAO {
 		values.put(KEY_SURNAME, contact.getSurname());
 		values.put(KEY_PHONE, contact.getPhone());
 		values.put(KEY_PHONE_TYPE, contact.getPhoneType());
-		values.put(KEY_PHONE_TYPE, contact.getImage());
+		values.put(KEY_IMG, contact.getImage());
 		return db.insert(TABLE_CONTACTS, null, values);
 	}
 

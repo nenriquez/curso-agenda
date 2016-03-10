@@ -10,6 +10,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -33,6 +34,7 @@ public class NewContactActivity extends Activity {
 	private ImageButton inputImage;
 	private ImageView imageView;
 	private Bitmap imageBitmap;
+	private String imagesThumsPath;
 
 
 	@Override
@@ -50,8 +52,8 @@ public class NewContactActivity extends Activity {
 		imageView = (ImageView) findViewById(R.id.imageView);
 
 		this.addListeners();
+		this.imagesThumsPath = this.getOrCreateDir();
 	}
-
 
 	private void addListeners() {
 		ok.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +81,6 @@ public class NewContactActivity extends Activity {
 		});
 		
 		inputImage.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 			    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -104,16 +105,26 @@ public class NewContactActivity extends Activity {
 	    // Create an image file name
 	    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.CANADA).format(new Date());
 	    String imageFileName = "JPEG_" + timeStamp + ".png";
-	    File storageDir = Environment.getExternalStorageDirectory();
-	    
-	    File file = new File(storageDir.getAbsolutePath() + "/" + imageFileName);
-	    Log.e("", storageDir.getAbsolutePath() + "/" + imageFileName);
+
+	    File file = new File(this.imagesThumsPath + "/" + imageFileName);
         FileOutputStream fOut = new FileOutputStream(file);
         bmp.compress(Bitmap.CompressFormat.PNG, 100, fOut);
         fOut.flush();
         fOut.close();
 
         return file;
+	}
+
+	private String getOrCreateDir() {
+		File storageDir = Environment.getExternalStorageDirectory();
+		String path = storageDir.getAbsolutePath() + "/conctacthums";
+		File FPath = new File(path);
+		if (!FPath.exists()) {
+			if (!FPath.mkdir()) {
+				System.out.println("***Problem creating Image folder " + path);
+			}
+		}
+		return path;
 	}
 	
 }
