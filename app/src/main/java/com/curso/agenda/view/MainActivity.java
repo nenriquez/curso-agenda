@@ -155,7 +155,12 @@ public class MainActivity extends AppCompatActivity
         if (requestCode == 100) {
             Contact contact = (Contact) data.getSerializableExtra("contact");
             if (dao.add(contact) > 0) {
-                // refresh data?
+                // refresh data
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentContacts cFragments = (FragmentContacts) fragmentManager.findFragmentByTag(FragmentContacts.TAG);
+                if (cFragments != null && cFragments.isVisible()) {
+                    cFragments.refreshList();
+                }
             } else {
                 Toast.makeText(getApplicationContext(), "Error on saving contact", Toast.LENGTH_LONG).show();
             }

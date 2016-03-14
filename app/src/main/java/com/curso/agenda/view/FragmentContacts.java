@@ -27,10 +27,11 @@ import java.io.File;
 
 public class FragmentContacts extends Fragment {
 
+    public static final String TAG = "fragment_contacts";
+
     private ListView list;
     private SimpleCursorAdapter dataAdapter;
     private ContactDAO dao;
-
 
     public static Fragment newInstance(Context context) {
         FragmentContacts f = new FragmentContacts();
@@ -110,21 +111,7 @@ public class FragmentContacts extends Fragment {
         });
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (resultCode != Activity.RESULT_OK) {
-            return;
-        }
-
-        if (requestCode == 100) {
-            Contact contact = (Contact) data.getSerializableExtra("contact");
-            if (dao.add(contact) > 0) {
-                dataAdapter.changeCursor(dao.getAll()); // refresh data
-            } else {
-                Toast.makeText(getContext(), "Error on saving contact", Toast.LENGTH_LONG).show();
-            }
-        }
+    public void refreshList() {
+        dataAdapter.changeCursor(dao.getAll());
     }
 }
