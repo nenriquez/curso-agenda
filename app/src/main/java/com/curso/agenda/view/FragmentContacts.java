@@ -45,13 +45,13 @@ public class FragmentContacts extends Fragment {
         dao = new ContactDAO(getContext());
         list = (ListView) root.findViewById(R.id.list);
 
-        this.displayListView();
+        this.displayView();
         this.addListeners();
 
         return root;
     }
 
-    private void displayListView() {
+    private void displayView() {
         Cursor cursor = dao.getAll();
 
         dataAdapter = new SimpleCursorAdapter(getContext(), R.layout.contact_item, cursor,

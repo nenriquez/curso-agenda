@@ -11,6 +11,8 @@ import com.example.nico.myapplication.R;
 
 public class FragmentMap extends Fragment {
 
+    public static final String TAG = "fragment_map";
+
     public static Fragment newInstance(Context context) {
         FragmentMap f = new FragmentMap();
 

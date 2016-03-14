@@ -4,19 +4,10 @@
     android:layout_height="match_parent"
     android:tag="fragment_contacts">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="contacts" />
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list">
-
     </ListView>
 
 </LinearLayout>

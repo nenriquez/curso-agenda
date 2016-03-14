@@ -11,6 +11,8 @@ import com.example.nico.myapplication.R;
 
 public class FragmentCall extends Fragment {
 
+    public static final String TAG = "fragment_call";
+
     public static Fragment newInstance(Context context) {
         FragmentCall f = new FragmentCall();
 

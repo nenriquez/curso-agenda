@@ -5,11 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,17 +15,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.curso.agenda.dao.ContactDAO;
 import com.curso.agenda.model.Contact;
 import com.example.nico.myapplication.R;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton fab;
+    private NavigationView navView;
     private ContactDAO dao;
+    private DrawerLayout drawer;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,39 +37,43 @@ public class MainActivity extends AppCompatActivity
 
         this.fab = (FloatingActionButton) findViewById(R.id.fab);
         this.dao = new ContactDAO(getApplicationContext());
+        this.navView = (NavigationView) findViewById(R.id.nav_view);
+        this.drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        this.toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        this.displayView();
+        this.addListeners();
+        this.loadConfig();
+
+        // select default fragment
+        navView.getMenu().findItem(R.id.nav_contacts).setChecked(true);
+        this.selectFragmentBy(R.id.nav_contacts);
+    }
+
+    private void displayView() {
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if (fab != null) {
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        this.addListeners();
     }
 
     private void addListeners() {
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                // Handle navigation view item clicks here.
+                selectFragmentBy(menuItem.getItemId());
+                setTitle(menuItem.getTitle());
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), NewContactActivity.class);
-                startActivityForResult(i, 100);
+                startActivityForResult(new Intent(getApplicationContext(), NewContactActivity.class), 100);
             }
         });
     }
@@ -117,32 +122,26 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem menuItem) {
-        // Handle navigation view item clicks here.
-        int id = menuItem.getItemId();
-
+    private void selectFragmentBy(int sectionId) {
         Fragment fragment = null;
+        String tag = "";
 
-        if (id == R.id.nav_map) {
+        if (sectionId == R.id.nav_map) {
             fragment = FragmentMap.newInstance(getApplicationContext());
-        } else if (id == R.id.nav_call) {
+            tag = FragmentMap.TAG;
+        } else if (sectionId == R.id.nav_call) {
             fragment = FragmentCall.newInstance(getApplicationContext());
+            tag = FragmentCall.TAG;
         } else {
             fragment = FragmentContacts.newInstance(getApplicationContext());
+            tag = FragmentContacts.TAG;
         }
 
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.main_fragment, fragment).commit();
-
-        setTitle(menuItem.getTitle());
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+        fragmentManager.beginTransaction().replace(R.id.main_fragment, fragment, tag).commit();
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -157,9 +156,9 @@ public class MainActivity extends AppCompatActivity
             if (dao.add(contact) > 0) {
                 // refresh data
                 FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentContacts cFragments = (FragmentContacts) fragmentManager.findFragmentByTag(FragmentContacts.TAG);
-                if (cFragments != null && cFragments.isVisible()) {
-                    cFragments.refreshList();
+                FragmentContacts concatcs = (FragmentContacts) fragmentManager.findFragmentByTag(FragmentContacts.TAG);
+                if (concatcs != null && concatcs.isVisible()) {
+                    concatcs.refreshList();
                 }
             } else {
                 Toast.makeText(getApplicationContext(), "Error on saving contact", Toast.LENGTH_LONG).show();
