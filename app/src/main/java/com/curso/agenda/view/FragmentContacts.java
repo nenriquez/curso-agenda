@@ -1,10 +1,8 @@
 package com.curso.agenda.view;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,11 +14,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.curso.agenda.dao.ContactDAO;
-import com.curso.agenda.model.Contact;
 import com.example.nico.myapplication.R;
 
 import java.io.File;
@@ -55,8 +50,8 @@ public class FragmentContacts extends Fragment {
         Cursor cursor = dao.getAll();
 
         dataAdapter = new SimpleCursorAdapter(getContext(), R.layout.contact_item, cursor,
-                new String[] {ContactDAO.KEY_NAME, ContactDAO.KEY_SURNAME, ContactDAO.KEY_PHONE_TYPE, ContactDAO.KEY_PHONE, ContactDAO.KEY_IMG},
-                new int[] {R.id.name, R.id.surname, R.id.phone, R.id.phoneType, R.id.img}, 0);
+                new String[] {ContactDAO.KEY_NAME, ContactDAO.KEY_SURNAME, ContactDAO.KEY_PHONE, ContactDAO.KEY_IMG},
+                new int[] {R.id.name, R.id.surname, R.id.phone, R.id.img}, 0);
 
         dataAdapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
@@ -78,38 +73,43 @@ public class FragmentContacts extends Fragment {
 
     private void addListeners() {
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
             @Override
-            public void onItemClick(AdapterView<?> listView, View itemView, int index, long id) {
-                ViewGroup parent = (ViewGroup) itemView;
-                parent = (ViewGroup) parent.getChildAt(0);
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Cursor c = (Cursor) parent.getAdapter().getItem(position);
+                final long contactId = c.getLong(0);
 
-                final String name = ((TextView) parent.getChildAt(1)).getText().toString();
-                final String surname = ((TextView) parent.getChildAt(2)).getText().toString();
-
+                final String name = c.getString(c.getColumnIndex(ContactDAO.KEY_NAME));
+                final String surname = c.getString(c.getColumnIndex(ContactDAO.KEY_SURNAME));
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
                 // set title
                 alertDialogBuilder
-                        .setTitle("Alert")
-                        .setMessage("Are u sure that you want to delete " + name + " " + surname)
-                        .setCancelable(false)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dao.delete(name, surname);
-                                dataAdapter.changeCursor(dao.getAll()); // refresh data
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        })
-                        .show();
+                    .setTitle("Contact Deletion")
+                    .setMessage("Are u sure that you want to delete " + name + " " + surname)
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dao.delete(contactId);
+                            dataAdapter.changeCursor(dao.getAll()); // refresh data
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                        }
+                    }).show();
+
+                return true;
             }
+
         });
     }
+
+
+
 
     public void refreshList() {
         dataAdapter.changeCursor(dao.getAll());

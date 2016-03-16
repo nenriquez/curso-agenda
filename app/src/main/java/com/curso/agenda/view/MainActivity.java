@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentContacts concatcs = (FragmentContacts) fragmentManager.findFragmentByTag(FragmentContacts.TAG);
                 if (concatcs != null && concatcs.isVisible()) {
-                    concatcs.refreshList();
+                     concatcs.refreshList();
                 }
             } else {
                 Toast.makeText(getApplicationContext(), "Error on saving contact", Toast.LENGTH_LONG).show();

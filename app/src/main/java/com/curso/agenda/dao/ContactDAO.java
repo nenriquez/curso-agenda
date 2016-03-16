@@ -99,7 +99,11 @@ public class ContactDAO {
     }
 
     public int delete(String name, String surname) {
-        return db.delete(TABLE_CONTACTS, "name = ? AND surname = ?", new String[] {name, surname});
+        return db.delete(TABLE_CONTACTS, "name = ? AND surname = ?", new String[]{name, surname});
+    }
+
+    public int delete(long contactId) {
+        return db.delete(TABLE_CONTACTS, "_id = ?", new String[]{String.valueOf(contactId)});
     }
 
 }
