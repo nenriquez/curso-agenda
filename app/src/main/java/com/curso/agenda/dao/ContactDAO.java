@@ -14,14 +14,13 @@ public class ContactDAO {
     public static final String TABLE_CONTACTS = "CONTACTS";
     public static final String KEY_ID = "_id";
     public static final String KEY_NAME = "name";
-    public static final String KEY_SURNAME = "surname";
     public static final String KEY_PHONE = "phone";
-    public static final String KEY_PHONE_TYPE = "phone_type";
+    public static final String KEY_EMAIL = "email";
     public static final String KEY_IMG = "image";
 
     private static class DBPersonasHelper extends SQLiteOpenHelper {
 
-        private static final int DB_VERSION = 1;
+        private static final int DB_VERSION = 2;
         
         private static final String DB_NAME = "DbAgenda.db3";
 
@@ -29,9 +28,8 @@ public class ContactDAO {
                 "CREATE TABLE " + TABLE_CONTACTS + " ("
                 + KEY_ID + " integer primary key autoincrement,"
                 + KEY_NAME + " varchar(64) NOT NULL,"
-                + KEY_SURNAME + " varchar(64) NOT NULL,"
-                + KEY_PHONE_TYPE + " varchar(64) NOT NULL,"
                 + KEY_PHONE + " varchar(64) NOT NULL,"
+                + KEY_EMAIL + " varchar(64) NOT NULL,"
                 + KEY_IMG + " varchar(64) DEFAULT NULL)";
         
         
@@ -70,7 +68,7 @@ public class ContactDAO {
     }
 
     public Cursor getAll() {
-        Cursor c = db.query(TABLE_CONTACTS, new String[] {KEY_ID, KEY_NAME, KEY_SURNAME, KEY_PHONE_TYPE, KEY_PHONE, KEY_IMG}, null, null, null, null, null);
+        Cursor c = db.query(TABLE_CONTACTS, new String[] {KEY_ID, KEY_NAME, KEY_PHONE, KEY_EMAIL, KEY_IMG}, null, null, null, null, null);
         if (c != null) {
             c.moveToFirst();
         }
@@ -81,9 +79,8 @@ public class ContactDAO {
     public long add(String name, String surname, String phone, String phoneType, String img) {
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, name);
-        values.put(KEY_SURNAME, surname);
         values.put(KEY_PHONE, phone);
-        values.put(KEY_PHONE_TYPE, phoneType);
+        values.put(KEY_EMAIL, phoneType);
         values.put(KEY_IMG, img);
         return db.insert(TABLE_CONTACTS, null, values);
     }
@@ -91,9 +88,8 @@ public class ContactDAO {
     public long add(Contact contact) {
         ContentValues values = new ContentValues();
         values.put(KEY_NAME, contact.getName());
-        values.put(KEY_SURNAME, contact.getSurname());
         values.put(KEY_PHONE, contact.getPhone());
-        values.put(KEY_PHONE_TYPE, contact.getPhoneType());
+        values.put(KEY_EMAIL, contact.getEmail());
         values.put(KEY_IMG, contact.getImage());
         return db.insert(TABLE_CONTACTS, null, values);
     }

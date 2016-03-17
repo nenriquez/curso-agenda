@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(getApplicationContext(), NewContactActivity.class), 100);
+                startActivityForResult(new Intent(getApplicationContext(), CreateContactActivity.class), 100);
             }
         });
     }

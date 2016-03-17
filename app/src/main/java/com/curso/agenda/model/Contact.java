@@ -4,62 +4,52 @@ import java.io.Serializable;
 
 public class Contact implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
 
-	private String name;
-	private String surname;
-	private String phone;
-	private String phoneType;
-	private String image;
-	
-	public Contact(String name, String surname, String phone, String phoneType, String image) {
-		this.name = name;
-		this.surname = surname;
-		this.phone = phone;
-		this.phoneType = phoneType;
-		this.image = image;
-	}
-	
-	public String getName() {
-		return name;
-	}
+    private String name;
+    private String phone;
+    private String email;
+    private String image;
+    
+    public Contact(String name, String phone, String email, String image) {
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.image = image;
+    }
+    
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getSurname() {
-		return surname;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
-	public String getPhone() {
-		return phone;
-	}
+    public String getImage() {
+        return image;
+    }
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+    public void setImage(String image) {
+        this.image = image;
+    }
 
-	public String getPhoneType() {
-		return phoneType;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setPhoneType(String phoneType) {
-		this.phoneType = phoneType;
-	}
-
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

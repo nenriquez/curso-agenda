@@ -50,8 +50,8 @@ public class FragmentContacts extends Fragment {
         Cursor cursor = dao.getAll();
 
         dataAdapter = new SimpleCursorAdapter(getContext(), R.layout.contact_item, cursor,
-                new String[] {ContactDAO.KEY_NAME, ContactDAO.KEY_SURNAME, ContactDAO.KEY_PHONE, ContactDAO.KEY_IMG},
-                new int[] {R.id.name, R.id.surname, R.id.phone, R.id.img}, 0);
+                new String[] {ContactDAO.KEY_NAME, ContactDAO.KEY_PHONE, ContactDAO.KEY_IMG},
+                new int[] {R.id.name, R.id.phone, R.id.img}, 0);
 
         dataAdapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
@@ -81,14 +81,13 @@ public class FragmentContacts extends Fragment {
                 final long contactId = c.getLong(0);
 
                 final String name = c.getString(c.getColumnIndex(ContactDAO.KEY_NAME));
-                final String surname = c.getString(c.getColumnIndex(ContactDAO.KEY_SURNAME));
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
                 // set title
                 alertDialogBuilder
                     .setTitle("Contact Deletion")
-                    .setMessage("Are u sure that you want to delete " + name + " " + surname)
+                    .setMessage("Are u sure that you want to delete " + name)
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
