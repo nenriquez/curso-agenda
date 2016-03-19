@@ -81,7 +81,6 @@ public class CreateContactActivity extends AppCompatActivity {
                     file = saveFile(imageBitmap);
                 }
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             }
 
@@ -112,10 +111,10 @@ public class CreateContactActivity extends AppCompatActivity {
         takeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, 1000);
-                }
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(takePictureIntent, 1000);
+            }
             }
         });
     }

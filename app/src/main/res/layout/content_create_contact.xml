@@ -60,17 +60,34 @@
                 app:met_maxCharacters="20"
                 android:inputType="textEmailAddress"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/input_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Address"
+                    app:met_iconLeft="@drawable/ic_place_white_24dp"
+                    app:met_iconPadding="0dp"
+                    app:met_maxCharacters="20"
+                    android:inputType="textPostalAddress"
+                    />
+
+                <ImageButton
+                    android:layout_alignEnd="@id/input_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_edit_location_white_24dp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/body">
-
-        </LinearLayout>
-
-        <android.support.design.widget.FloatingActionButton
+         <android.support.design.widget.FloatingActionButton
             android:id="@+id/take_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
