@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.support.v4.os.ResultReceiver;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +28,11 @@ import android.widget.Toast;
 import com.curso.agenda.model.Contact;
 import com.curso.agenda.service.FetchAddressIntentService;
 import com.example.nico.myapplication.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationServices;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,9 +56,12 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 
     private String imagesThumsPath;
 
-    private LocationManager locationManager;
+    private GoogleApiClient mGoogleApiClient;
+
+//    private LocationManager locationManager;
     private Location lastKnowLocation;
-    private Boolean addressRequested;
+    private Boolean addressRequested = false;
+    private Intent fetchAddressIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,15 +76,14 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         headerImage = (ImageView) findViewById(R.id.header);
         toolbar = (Toolbar) findViewById(R.id.create_contacts_toolbar);
         editAddress = (ImageView) findViewById(R.id.set_address);
-        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
         registerForContextMenu(editAddress);
 
         this.addListeners();
         this.displayView();
+        this.buildGoogleApiClient();
         // create directory for images
         this.imagesThumsPath = this.getOrCreateDir();
-        //this.initLocation();
     }
 
     @Override
@@ -106,10 +115,12 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
     }
 
     private void startLookingUpAddresses() {
-        Intent intent = new Intent(this, FetchAddressIntentService.class);
-        intent.putExtra(FetchAddressIntentService.Constants.RECEIVER, this);
-        intent.putExtra(FetchAddressIntentService.Constants.LOCATION_DATA_EXTRA, lastKnowLocation);
-        startService(intent);
+        if (fetchAddressIntent == null) {
+            fetchAddressIntent = new Intent(this, FetchAddressIntentService.class);
+            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.RECEIVER, new AddressResultReceiver());
+            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.LOCATION_DATA_EXTRA, lastKnowLocation);
+        }
+        startService(fetchAddressIntent);
     }
 
     @Override
@@ -122,7 +133,8 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
             setResult(Activity.RESULT_CANCELED, new Intent());
-            close();
+            finish();
+//            close();
             return true;
         }
 
@@ -143,7 +155,8 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
             String path = file != null ? file.getAbsolutePath() : "";
             Contact contact = new Contact(name, phone, email, path);
             setResult(Activity.RESULT_OK, new Intent().putExtra("contact", contact));
-            close();
+            finish();
+            //            close();
             return true;
         }
 
@@ -178,6 +191,52 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         });
     }
 
+    @Override
+    public void onConnected(Bundle connectionHint) {
+        // Gets the best and most recent location currently available,
+        // which may be null in rare cases when a location is not available.
+        lastKnowLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+
+        if (lastKnowLocation != null) {
+            // Determine whether a Geocoder is available.
+            if (!Geocoder.isPresent()) {
+                Toast.makeText(this, R.string.no_geocoder_available, Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (addressRequested) {
+                startLookingUpAddresses();
+            }
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(fetchAddressIntent);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
+
+
     private void displayView() {
         setSupportActionBar(toolbar);
 
@@ -210,7 +269,7 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         File FPath = new File(path);
         if (!FPath.exists()) {
             if (!FPath.mkdir()) {
-                System.out.println("***Problem creating Image folder " + path);
+                Log.e(this.getClass().toString(), "Problem creating Image folder " + path);
             }
         }
         return path;
@@ -222,45 +281,42 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 //        }
 //    }
 
-    private void close() {
-        // Remove the listener you previously added
+//    private void close() {
+//        // Remove the listener you previously added
 //        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 //            locationManager.removeUpdates(this);
 //        }
-        finish();
-    }
+//        finish();
+//    }
 
-    @Override
-    public void onConnected(Bundle connectionHint) {
-        // Gets the best and most recent location currently available,
-        // which may be null in rare cases when a location is not available.
-        lastKnowLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+    class UpdateUI implements Runnable
+    {
+        String updateString;
 
-        if (mLastLocation != null) {
-            // Determine whether a Geocoder is available.
-            if (!Geocoder.isPresent()) {
-                Toast.makeText(this, R.string.no_geocoder_available,
-                        Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            if (addressRequested) {
-                startIntentService();
-            }
+        public UpdateUI(String updateString) {
+            this.updateString = updateString;
+        }
+        public void run() {
+            inputAddress.setText(updateString);
         }
     }
 
 
     class AddressResultReceiver extends ResultReceiver {
 
+        public AddressResultReceiver() {
+            super(null);
+        }
+
         public AddressResultReceiver(Handler handler) {
             super(handler);
         }
 
+
         @Override
         protected void onReceiveResult(int resultCode, Bundle resultData) {
             String address = resultData.getString(FetchAddressIntentService.Constants.RESULT_DATA_KEY);
-            inputAddress.setText(address);
+            runOnUiThread(new UpdateUI(address));
 
             // Show a toast message if an address was found.
             if (resultCode == FetchAddressIntentService.Constants.SUCCESS_RESULT) {
@@ -294,4 +350,19 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 //    public void onProviderDisabled(String provider) {
 //    }
 
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result) {
+        // Refer to the javadoc for ConnectionResult to see what error codes might be returned in
+        // onConnectionFailed.
+        Log.i(this.getClass().toString(), "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
+    }
+
+    @Override
+    public void onConnectionSuspended(int cause) {
+        // The connection to Google Play services was lost for some reason. We call connect() to
+        // attempt to re-establish the connection.
+        Log.i(this.getClass().toString(), "Connection suspended");
+        mGoogleApiClient.connect();
+    }
 }

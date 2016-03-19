@@ -34,6 +34,9 @@ public class FetchAddressIntentService extends IntentService {
 
     private ResultReceiver resultReceiver;
 
+    public FetchAddressIntentService() {
+        super("FetchAddress");
+    }
 
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
