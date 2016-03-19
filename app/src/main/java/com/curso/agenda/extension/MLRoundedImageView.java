@@ -1,4 +1,4 @@
-package com.nico.extension;
+package com.curso.agenda.extension;
 
 import android.content.Context;
 import android.graphics.Bitmap;

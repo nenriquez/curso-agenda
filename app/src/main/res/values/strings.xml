@@ -99,4 +99,10 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <string name="current_loc">Use current location</string>
+    <string name="map_lo">Select from map</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_latitude">Invalid latitude</string>
+    <string name="no_address_found">No address found</string>
 </resources>

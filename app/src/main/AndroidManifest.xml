@@ -7,6 +7,7 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -27,11 +28,14 @@
         <activity
             android:name="com.curso.agenda.view.CreateContactActivity"
             android:label="New Contact"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name="com.nico.myapplication.prueba"
-            android:label="@string/title_activity_prueba"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <service
+            android:name=".FetchAddressIntentService"
+            android:exported="false">
+
+        </service>
     </application>
 
 </manifest>

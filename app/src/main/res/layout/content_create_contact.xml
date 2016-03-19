@@ -1,105 +1,87 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarStyle="outsideOverlay"
-    tools:context=".CreateContactActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.curso.agenda.view.CreateContactActivity"
+    tools:showIn="@layout/activity_create_contact">
 
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/body"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:paddingBottom="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="32dp">
 
-        <ImageView
-            android:id="@+id/header"
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_name"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:background="@color/gray_empty"
-            android:src="@drawable/ic_person_black_24dp"/>
+            android:layout_height="wrap_content"
+            android:hint="Full name"
+            app:met_iconLeft="@drawable/ic_person_black_24dp"
+            app:met_iconPadding="0dp"
+            app:met_maxCharacters="20"
+            android:inputType="textPersonName"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            app:met_iconLeft="@drawable/ic_phone"
+            app:met_iconPadding="0dp"
+            app:met_maxCharacters="20"
+            android:inputType="phone"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:met_iconLeft="@drawable/ic_email_white_24dp"
+            app:met_iconPadding="0dp"
+            app:met_maxCharacters="20"
+            android:inputType="textEmailAddress"/>
 
         <LinearLayout
-            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@id/header"
-            android:paddingBottom="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="32dp">
+            android:orientation="horizontal">
 
             <com.rengwuxian.materialedittext.MaterialEditText
-                android:id="@+id/input_name"
-                android:layout_width="match_parent"
+                android:id="@+id/input_address"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Full name"
-                app:met_iconLeft="@drawable/ic_person_black_24dp"
+                android:layout_weight="1"
+                android:hint="Address"
+                app:met_iconLeft="@drawable/ic_place_white_24dp"
                 app:met_iconPadding="0dp"
                 app:met_maxCharacters="20"
-                android:inputType="textPersonName"/>
+                android:inputType="textPostalAddress"
+                />
 
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:id="@+id/input_phone"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/set_address"
+                android:layout_alignEnd="@id/input_address"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Phone"
-                app:met_iconLeft="@drawable/ic_phone"
-                app:met_iconPadding="0dp"
-                app:met_maxCharacters="20"
-                android:inputType="phone"/>
-
-            <com.rengwuxian.materialedittext.MaterialEditText
-                android:id="@+id/input_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                app:met_iconLeft="@drawable/ic_email_white_24dp"
-                app:met_iconPadding="0dp"
-                app:met_maxCharacters="20"
-                android:inputType="textEmailAddress"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.rengwuxian.materialedittext.MaterialEditText
-                    android:id="@+id/input_address"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Address"
-                    app:met_iconLeft="@drawable/ic_place_white_24dp"
-                    app:met_iconPadding="0dp"
-                    app:met_maxCharacters="20"
-                    android:inputType="textPostalAddress"
-                    />
-
-                <ImageButton
-                    android:layout_alignEnd="@id/input_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:src="@drawable/ic_edit_location_white_24dp"/>
-            </LinearLayout>
-
+                android:tint="@android:color/darker_gray"
+                android:src="@drawable/ic_edit_location_white_24dp"/>
         </LinearLayout>
 
-         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/take_image"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignBottom="@id/header"
-            android:layout_marginBottom="-32dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_add_a_photo_white_24dp"
-            android:scaleType="center"
-            app:borderWidth="0dp" />
+            android:text="@string/large_text"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>
