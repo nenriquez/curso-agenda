@@ -15,6 +15,11 @@
           <theme>@style/AppTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_get_location_maps.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/contact_item.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -41,11 +46,6 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-        <config>
-          <theme>@android:style/Theme.Material.Light</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_prueba.xml">
         <config>
           <theme>@android:style/Theme.Material.Light</theme>
         </config>
@@ -77,76 +77,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CreateContactActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateContactActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/CreateContactActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37545788">
-              <caret line="304" column="10" selection-start-line="304" selection-start-column="10" selection-end-line="304" selection-end-column="10" />
+            <state vertical-scroll-proportion="-68.359375">
+              <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6350#6727#0" expanded="true" />
-                <element signature="e#6726#6727#0" expanded="true" />
-                <element signature="e#6770#6923#0" expanded="true" />
-                <element signature="e#6922#6923#0" expanded="true" />
-                <element signature="e#7421#7451#0" expanded="true" />
-                <element signature="e#10262#10263#0" expanded="true" />
-                <element signature="e#10318#10319#0" expanded="true" />
-                <element signature="e#10346#10347#0" expanded="true" />
-                <element signature="e#10404#10405#0" expanded="true" />
-                <element signature="e#10511#10512#0" expanded="true" />
-                <element signature="e#10546#10547#0" expanded="true" />
-                <element signature="e#10603#10604#0" expanded="true" />
-                <element signature="e#10641#10642#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/app/Activity.java">
+      <file leaf-file-name="ContextWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/content/ContextWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5506" column="22" selection-start-line="5506" selection-start-column="22" selection-end-line="5506" selection-end-column="22" />
+              <caret line="579" column="25" selection-start-line="579" selection-start-column="25" selection-end-line="579" selection-end-column="25" />
+              <folding>
+                <element signature="e#16695#16696#0" expanded="true" />
+                <element signature="e#16745#16746#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetLocationMapsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/GetLocationMapsActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2582#2751#0" expanded="true" />
+                <element signature="e#2750#2751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_get_location_maps.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_get_location_maps.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.4444447">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentActivity.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <file leaf-file-name="activity_create_contact.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_contact.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="588" column="19" selection-start-line="588" selection-start-column="19" selection-end-line="588" selection-end-column="19" />
+            <state vertical-scroll-proportion="-1.4444444">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoogleApiClient.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar!/com/google/android/gms/common/api/GoogleApiClient.class">
+      <file leaf-file-name="dimens.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.038462">
-              <caret line="350" column="21" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultReceiver.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/os/ResultReceiver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.24725275">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -156,50 +156,47 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding>
-                <element signature="e#736#754#0" expanded="true" />
+                <element signature="e#1412#1454#0" expanded="true" />
+                <element signature="e#2268#2293#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FetchAddressIntentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/FetchAddressIntentService.java">
+      <file leaf-file-name="FragmentMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentMap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Iterator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/java/util/Iterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1445#1446#0" expanded="true" />
-                <element signature="e#2046#2087#0" expanded="true" />
-                <element signature="e#2238#2274#0" expanded="true" />
-                <element signature="e#2454#2490#0" expanded="true" />
-                <element signature="e#2774#2782#0" expanded="true" />
+                <element signature="e#0#2495#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/app/IntentService.java">
+      <file leaf-file-name="ContactDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/dao/ContactDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.961538">
-              <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-              <folding />
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="e#2209#2210#0" expanded="true" />
+                <element signature="e#2243#2244#0" expanded="true" />
+                <element signature="e#2923#2932#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -660,9 +657,9 @@
                 <option name="name" value="prepareComAndroidSupportDesign2321Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:mediarouter-v7:22.2.0" />
+                <option name="description" value="Prepare com.android.support:mediarouter-v7:23.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportMediarouterV72220Library" />
+                <option name="name" value="prepareComAndroidSupportMediarouterV72300Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:recyclerview-v7:23.2.1" />
@@ -680,124 +677,129 @@
                 <option name="name" value="prepareComAndroidSupportSupportVectorDrawable2321Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServices810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServices840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-ads:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-ads:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-analytics:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-analytics:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAnalytics810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAnalytics840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appinvite:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appinvite:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppinvite810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppinvite840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appstate:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appstate:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppstate810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppstate840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-auth:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAuth840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-cast:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesCast810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-drive:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-cast:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesDrive810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesCast840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-fitness:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-drive:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesFitness810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesDrive840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-games:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-fitness:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGames810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesFitness840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-games:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGames840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-identity:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIdentity810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-identity:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIdentity840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-measurement:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMeasurement810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-nearby:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-measurement:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesNearby810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMeasurement840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-panorama:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-nearby:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPanorama810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesNearby840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-plus:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-panorama:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPlus810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPanorama840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-safetynet:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-plus:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesSafetynet810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPlus840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-vision:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-safetynet:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesVision810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesSafetynet840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-wallet:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-vision:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWallet810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesVision840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-wearable:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-wallet:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWearable810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWallet840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-wearable:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWearable840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.rengwuxian.materialedittext:library:2.1.4" />
@@ -1362,9 +1364,9 @@
                 <option name="name" value="prepareComAndroidSupportDesign2321Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:mediarouter-v7:22.2.0" />
+                <option name="description" value="Prepare com.android.support:mediarouter-v7:23.0.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComAndroidSupportMediarouterV72220Library" />
+                <option name="name" value="prepareComAndroidSupportMediarouterV72300Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:recyclerview-v7:23.2.1" />
@@ -1382,124 +1384,129 @@
                 <option name="name" value="prepareComAndroidSupportSupportVectorDrawable2321Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServices810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServices840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-ads:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-ads:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-analytics:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-analytics:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAnalytics810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAnalytics840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appindexing:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppindexing840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appinvite:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appinvite:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppinvite810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppinvite840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-appstate:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-appstate:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppstate810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAppstate840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-auth:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAuth840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-base:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBase840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-cast:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-basement:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesCast810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesBasement840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-drive:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-cast:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesDrive810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesCast840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-fitness:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-drive:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesFitness810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesDrive840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-games:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-fitness:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGames810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesFitness840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-games:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGames840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-identity:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-gcm:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIdentity810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesGcm840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-identity:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesIdentity840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-location:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesLocation840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-measurement:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-maps:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMeasurement810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMaps840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-nearby:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-measurement:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesNearby810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesMeasurement840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-panorama:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-nearby:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPanorama810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesNearby840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-plus:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-panorama:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPlus810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPanorama840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-safetynet:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-plus:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesSafetynet810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesPlus840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-vision:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-safetynet:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesVision810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesSafetynet840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-wallet:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-vision:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWallet810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesVision840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.google.android.gms:play-services-wearable:8.1.0" />
+                <option name="description" value="Prepare com.google.android.gms:play-services-wallet:8.4.0" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWearable810Library" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWallet840Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.google.android.gms:play-services-wearable:8.4.0" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComGoogleAndroidGmsPlayServicesWearable840Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.rengwuxian.materialedittext:library:2.1.4" />
@@ -1689,7 +1696,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4374059785311" />
+        <entry key="$PROJECT_DIR$" value="4374155181430" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1908,36 +1915,37 @@
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.2.1/appcompat-v7-23.2.1.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/design/23.2.1/design-23.2.1.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rengwuxian.materialedittext/library/2.1.4/a14709b74bc6982a5cfc3b193b6a30881b790169/library-2.1.4.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services/8.1.0/play-services-8.1.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services/8.4.0/play-services-8.4.0.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/animated-vector-drawable/23.2.1/animated-vector-drawable-23.2.1.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-vector-drawable/23.2.1/support-vector-drawable-23.2.1.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.2.1/recyclerview-v7-23.2.1.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-ads/8.1.0/play-services-ads-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/8.1.0/play-services-analytics-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appindexing/8.1.0/play-services-appindexing-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appinvite/8.1.0/play-services-appinvite-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appstate/8.1.0/play-services-appstate-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.1.0/play-services-base-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.1.0/play-services-basement-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-cast/8.1.0/play-services-cast-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-drive/8.1.0/play-services-drive-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-fitness/8.1.0/play-services-fitness-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-games/8.1.0/play-services-games-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-gcm/8.1.0/play-services-gcm-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-identity/8.1.0/play-services-identity-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.1.0/play-services-location-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.1.0/play-services-maps-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-measurement/8.1.0/play-services-measurement-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-nearby/8.1.0/play-services-nearby-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-panorama/8.1.0/play-services-panorama-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-plus/8.1.0/play-services-plus-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-safetynet/8.1.0/play-services-safetynet-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-vision/8.1.0/play-services-vision-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-wallet/8.1.0/play-services-wallet-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-wearable/8.1.0/play-services-wearable-8.1.0.aar" />
-                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/mediarouter-v7/22.2.0/mediarouter-v7-22.2.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-ads/8.4.0/play-services-ads-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/8.4.0/play-services-analytics-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appindexing/8.4.0/play-services-appindexing-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appinvite/8.4.0/play-services-appinvite-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-appstate/8.4.0/play-services-appstate-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-auth/8.4.0/play-services-auth-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-base/8.4.0/play-services-base-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.4.0/play-services-basement-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-cast/8.4.0/play-services-cast-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-drive/8.4.0/play-services-drive-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-fitness/8.4.0/play-services-fitness-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-games/8.4.0/play-services-games-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-gcm/8.4.0/play-services-gcm-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-identity/8.4.0/play-services-identity-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-location/8.4.0/play-services-location-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-maps/8.4.0/play-services-maps-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-measurement/8.4.0/play-services-measurement-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-nearby/8.4.0/play-services-nearby-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-panorama/8.4.0/play-services-panorama-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-plus/8.4.0/play-services-plus-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-safetynet/8.4.0/play-services-safetynet-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-vision/8.4.0/play-services-vision-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-wallet/8.4.0/play-services-wallet-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/google/m2repository/com/google/android/gms/play-services-wearable/8.4.0/play-services-wearable-8.4.0.aar" />
+                            <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/mediarouter-v7/23.0.0/mediarouter-v7-23.0.0.aar" />
                             <option value="$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar" />
                           </list>
                         </option>
@@ -2079,23 +2087,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentCall.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentMap.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_call.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_contacts.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_whithe.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nico/extension/MLRoundedImageView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_account.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/text_cursor_cyan.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/model/Contact.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/dao/ContactDAO.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentContacts.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_camera.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/create_contact.xml" />
@@ -2106,17 +2106,28 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_prueba.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_create_contact.xml.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_prueba.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_contact.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_create_contact.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_create_contact.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/address_context_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/FetchAddressIntentService.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/AddressResultReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/model/Contact.java" />
+        <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/FetchAddressIntentService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentContacts.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentCall.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_contact.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_create_contact.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_get_location_maps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/dao/ContactDAO.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/GetLocationMapsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/CreateContactActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentMap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
       </list>
     </option>
   </component>
@@ -2126,6 +2137,9 @@
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="NamedScopeManager">
     <order />
@@ -2177,8 +2191,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
@@ -2200,6 +2212,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curso-agenda" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="curso-agenda" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2255,10 +2307,6 @@
               <option name="myItemId" value="agenda" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2270,17 +2318,15 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agenda" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2292,6 +2338,9 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
+    <property name="DEBUGGABLE_DEVICE" value="motorola-xt1058-T01130FKFO" />
+    <property name="DEBUGGABLE_PROCESS" value="com.nico.curso.agenda" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -2302,6 +2351,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
     <key name="android.template.packageName">
+      <recent name="com.curso.agenda.view" />
       <recent name="com.nico.myapplication" />
     </key>
     <key name="android.template.parentActivityClass">
@@ -2510,9 +2560,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29060772" sideWeight="0.49361703" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3679558" sideWeight="0.49148935" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3679558" sideWeight="0.49042553" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.506383" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3679558" sideWeight="0.5095745" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -2521,7 +2571,7 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.49574468" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1856383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2552,222 +2602,28 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentMap.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/GetLocationMapsActivity.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/model/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/dao/ContactDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentContacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_email_white_24dp.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_person_black_24dp.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_send.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_slideshow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_gallery.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7843137">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29783395">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.2.1/appcompat-v7-23.2.1-sources.jar!/android/support/v7/app/ActionBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="487" column="25" selection-start-line="487" selection-start-column="25" selection-end-line="487" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10830325">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21621622">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07745267">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/view/MenuInflater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#20941#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#8483#8484#0" expanded="false" />
-            <element signature="e#8514#8515#0" expanded="false" />
-            <element signature="e#20266#20267#0" expanded="false" />
-            <element signature="e#20306#20307#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/widget/CircleImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28055078">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/widget/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/graphics/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="62" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rengwuxian.materialedittext/library/2.1.4/421c5ba24415fde1222bd75540aa012efc22ed5a/library-2.1.4-sources.jar!/com/rengwuxian/materialedittext/MaterialEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.32157677">
-          <caret line="560" column="30" selection-start-line="560" selection-start-column="21" selection-end-line="560" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_edit_location_white_24dp.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/nico/myapplication/ApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11945392">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.2.1/appcompat-v7-23.2.1-sources.jar!/android/support/v7/widget/Toolbar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_contact.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.051194537">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/widget/Toast.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2784,25 +2640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_create_contact.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36416185">
-          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/java/lang/Override.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41208792">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2812,20 +2649,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/contact_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1111112">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_create_contact.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.1111112">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -2840,21 +2669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/address_context_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#322#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/location/LocationListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="33" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2862,7 +2680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="277" column="13" selection-start-line="277" selection-start-column="13" selection-end-line="277" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2870,15 +2687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.961538">
-          <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2886,7 +2694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2894,7 +2701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2902,59 +2708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
-          <folding>
-            <element signature="e#736#754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar!/com/google/android/gms/common/api/GoogleApiClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.038462">
-          <caret line="350" column="21" selection-start-line="350" selection-start-column="21" selection-end-line="350" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="588" column="19" selection-start-line="588" selection-start-column="19" selection-end-line="588" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/FetchAddressIntentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-            <element signature="e#2046#2087#0" expanded="true" />
-            <element signature="e#2238#2274#0" expanded="true" />
-            <element signature="e#2454#2490#0" expanded="true" />
-            <element signature="e#2774#2782#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2966,34 +2719,362 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6040956">
+          <caret line="588" column="19" selection-start-line="588" selection-start-column="19" selection-end-line="588" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25597268">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/content/Intent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4341" column="11" selection-start-line="4341" selection-start-column="11" selection-end-line="4341" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5506" column="22" selection-start-line="5506" selection-start-column="22" selection-end-line="5506" selection-end-column="22" />
+          <caret line="811" column="0" selection-start-line="811" selection-start-column="0" selection-end-line="811" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar!/com/google/android/gms/maps/CameraUpdateFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16346154">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37572256">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="16" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25466892">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/com/nico/curso/agenda/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028790787">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar!/com/google/android/gms/maps/GoogleMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39423078">
+          <caret line="161" column="23" selection-start-line="161" selection-start-column="17" selection-end-line="161" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/address_context_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16483517">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/service/FetchAddressIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="59" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/location/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
+          <folding>
+            <element signature="e#4096#4097#0" expanded="false" />
+            <element signature="e#4132#4133#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.076923">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_create_contact.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27745664">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar!/com/google/android/gms/maps/SupportMapFragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35">
+          <caret line="161" column="16" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_create_contact.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar!/com/google/android/gms/maps/model/LatLng.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2596154">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_contacts.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Dev/SDK/android-sdk/extras/android/m2repository/com/android/support/support-v4/23.2.1/support-v4-23.2.1-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="691" column="33" selection-start-line="691" selection-start-column="33" selection-end-line="691" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentContacts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/model/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/java/util/Iterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#2495#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5182342">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#1412#1454#0" expanded="true" />
+            <element signature="e#2268#2293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_get_location_maps.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4444447">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_map.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2601156">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/dao/ContactDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2243#2244#0" expanded="true" />
+            <element signature="e#2923#2932#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dev/SDK/android-sdk/sources/android-23/android/content/ContextWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="579" column="25" selection-start-line="579" selection-start-column="25" selection-end-line="579" selection-end-column="25" />
+          <folding>
+            <element signature="e#16695#16696#0" expanded="true" />
+            <element signature="e#16745#16746#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/GetLocationMapsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2582#2751#0" expanded="true" />
+            <element signature="e#2750#2751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/FragmentMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/curso/agenda/view/CreateContactActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37545788">
-          <caret line="304" column="10" selection-start-line="304" selection-start-column="10" selection-end-line="304" selection-end-column="10" />
+        <state vertical-scroll-proportion="-68.359375">
+          <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6350#6727#0" expanded="true" />
-            <element signature="e#6726#6727#0" expanded="true" />
-            <element signature="e#6770#6923#0" expanded="true" />
-            <element signature="e#6922#6923#0" expanded="true" />
-            <element signature="e#7421#7451#0" expanded="true" />
-            <element signature="e#10262#10263#0" expanded="true" />
-            <element signature="e#10318#10319#0" expanded="true" />
-            <element signature="e#10346#10347#0" expanded="true" />
-            <element signature="e#10404#10405#0" expanded="true" />
-            <element signature="e#10511#10512#0" expanded="true" />
-            <element signature="e#10546#10547#0" expanded="true" />
-            <element signature="e#10603#10604#0" expanded="true" />
-            <element signature="e#10641#10642#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_contact.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4444444">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24725275">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

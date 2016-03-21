@@ -10,7 +10,7 @@ import android.support.v4.os.ResultReceiver;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.example.nico.myapplication.R;
+import com.nico.curso.agenda.R;
 
 import java.io.IOException;
 import java.util.ArrayList;

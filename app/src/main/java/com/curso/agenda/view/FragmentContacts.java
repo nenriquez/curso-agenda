@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.curso.agenda.dao.ContactDAO;
-import com.example.nico.myapplication.R;
+import com.nico.curso.agenda.R;
 
 import java.io.File;
 

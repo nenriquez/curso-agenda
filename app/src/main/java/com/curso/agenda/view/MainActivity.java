@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import com.curso.agenda.dao.ContactDAO;
 import com.curso.agenda.model.Contact;
-import com.example.nico.myapplication.R;
+import com.nico.curso.agenda.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,18 +62,18 @@ public class MainActivity extends AppCompatActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                // Handle navigation view item clicks here.
-                selectFragmentBy(menuItem.getItemId());
-                setTitle(menuItem.getTitle());
-                drawer.closeDrawer(GravityCompat.START);
-                return true;
+            // Handle navigation view item clicks here.
+            selectFragmentBy(menuItem.getItemId());
+            setTitle(menuItem.getTitle());
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
             }
         });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(getApplicationContext(), CreateContactActivity.class), 100);
+            startActivityForResult(new Intent(getApplicationContext(), CreateContactActivity.class), 100);
             }
         });
     }

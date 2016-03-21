@@ -1,12 +1,10 @@
 package com.curso.agenda.view;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.location.Geocoder;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -27,12 +25,13 @@ import android.widget.Toast;
 
 import com.curso.agenda.model.Contact;
 import com.curso.agenda.service.FetchAddressIntentService;
-import com.example.nico.myapplication.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
+import com.nico.curso.agenda.R;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -60,8 +59,10 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 
 //    private LocationManager locationManager;
     private Location lastKnowLocation;
+    private String lastKnowAddress;
     private Boolean addressRequested = false;
     private Intent fetchAddressIntent;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,29 +99,28 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         switch (item.getItemId()) {
             case R.id.use_loc:
                 Toast.makeText(getApplicationContext(), "Looking for address begin", Toast.LENGTH_LONG).show();
-
                 if (mGoogleApiClient.isConnected() && lastKnowLocation != null) {
                     startLookingUpAddresses();
                 }
-
                 addressRequested = true;
+                return true;
+
+            case R.id.use_map:
+                LatLng latLng = null;
+                if (lastKnowLocation != null) {
+                    latLng = new LatLng(lastKnowLocation.getLatitude(), lastKnowLocation.getLongitude());
+                }
+
+                Intent i = new Intent(getApplicationContext(), GetLocationMapsActivity.class);
+                i.putExtra(Constants.LAST_KNOW_LOCATION, latLng);
+                i.putExtra(Constants.CONTACT_NAME, inputName.getText());
+                startActivityForResult(i, Constants.GET_LOC_INTENT_ID);
 
                 return true;
-            case R.id.use_map:
-                Toast.makeText(getApplicationContext(), "2 newognei", Toast.LENGTH_LONG);
-                return true;
+
             default:
                 return super.onContextItemSelected(item);
         }
-    }
-
-    private void startLookingUpAddresses() {
-        if (fetchAddressIntent == null) {
-            fetchAddressIntent = new Intent(this, FetchAddressIntentService.class);
-            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.RECEIVER, new AddressResultReceiver());
-            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.LOCATION_DATA_EXTRA, lastKnowLocation);
-        }
-        startService(fetchAddressIntent);
     }
 
     @Override
@@ -153,10 +153,11 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
             String email = inputEmail.getText().toString();
 
             String path = file != null ? file.getAbsolutePath() : "";
-            Contact contact = new Contact(name, phone, email, path);
+            Contact contact = new Contact(name, phone, email, path, lastKnowAddress,
+                    lastKnowLocation.getLatitude(), lastKnowLocation.getLongitude());
             setResult(Activity.RESULT_OK, new Intent().putExtra("contact", contact));
             finish();
-            //            close();
+//            close();
             return true;
         }
 
@@ -165,48 +166,19 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 1000 && resultCode == RESULT_OK) {
+        if (requestCode == Constants.GET_IMG_INTENT_ID && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
             headerImage.setImageBitmap(imageBitmap);
         }
-    }
 
-    private void addListeners() {
-        takeImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                    startActivityForResult(takePictureIntent, 1000);
-                }
-            }
-        });
-
-        editAddress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.showContextMenu();
-            }
-        });
-    }
-
-    @Override
-    public void onConnected(Bundle connectionHint) {
-        // Gets the best and most recent location currently available,
-        // which may be null in rare cases when a location is not available.
-        lastKnowLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-
-        if (lastKnowLocation != null) {
-            // Determine whether a Geocoder is available.
-            if (!Geocoder.isPresent()) {
-                Toast.makeText(this, R.string.no_geocoder_available, Toast.LENGTH_LONG).show();
-                return;
-            }
-
-            if (addressRequested) {
-                startLookingUpAddresses();
-            }
+        if (requestCode == Constants.GET_LOC_INTENT_ID  && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            LatLng latLng = (LatLng) extras.getParcelable(Constants.RESULT_DATA_KEY);
+            lastKnowLocation = new Location("");
+            lastKnowLocation.setLatitude(latLng.latitude);
+            lastKnowLocation.setLongitude(latLng.longitude);
+            startLookingUpAddresses();
         }
     }
 
@@ -225,7 +197,37 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        stopService(fetchAddressIntent);
+        if (fetchAddressIntent != null) {
+            stopService(fetchAddressIntent);
+        }
+    }
+
+    private void addListeners() {
+        takeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(takePictureIntent, Constants.GET_IMG_INTENT_ID);
+            }
+            }
+        });
+
+        editAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.showContextMenu();
+            }
+        });
+    }
+
+    private void startLookingUpAddresses() {
+        if (fetchAddressIntent == null) {
+            fetchAddressIntent = new Intent(this, FetchAddressIntentService.class);
+            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.RECEIVER, new AddressResultReceiver());
+            fetchAddressIntent.putExtra(FetchAddressIntentService.Constants.LOCATION_DATA_EXTRA, lastKnowLocation);
+        }
+        startService(fetchAddressIntent);
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -235,7 +237,6 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
                 .addApi(LocationServices.API)
                 .build();
     }
-
 
     private void displayView() {
         setSupportActionBar(toolbar);
@@ -275,20 +276,6 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         return path;
     }
 
-//    private void initLocation() {
-//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
-//        }
-//    }
-
-//    private void close() {
-//        // Remove the listener you previously added
-//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-//            locationManager.removeUpdates(this);
-//        }
-//        finish();
-//    }
-
     class UpdateUI implements Runnable
     {
         String updateString;
@@ -296,11 +283,11 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         public UpdateUI(String updateString) {
             this.updateString = updateString;
         }
+
         public void run() {
             inputAddress.setText(updateString);
         }
     }
-
 
     class AddressResultReceiver extends ResultReceiver {
 
@@ -316,6 +303,7 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
         @Override
         protected void onReceiveResult(int resultCode, Bundle resultData) {
             String address = resultData.getString(FetchAddressIntentService.Constants.RESULT_DATA_KEY);
+            lastKnowAddress = address;
             runOnUiThread(new UpdateUI(address));
 
             // Show a toast message if an address was found.
@@ -328,6 +316,69 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
             }
         }
     }
+
+    public class Constants {
+        public static final String PACKAGE_NAME = "com.curso.agenda.view";
+        public static final String LAST_KNOW_LOCATION = PACKAGE_NAME + ".LAST_KNOW_LOCATION";
+        public static final String CONTACT_NAME = PACKAGE_NAME + ".CONTACT_NAME";
+        public static final int GET_IMG_INTENT_ID = 1000;
+        public static final int GET_LOC_INTENT_ID = 1001;
+        public static final String RESULT_DATA_KEY = PACKAGE_NAME + ".RESULT_DATA_KEY";
+
+    }
+
+    //------------- ConnectionCallbacks OnConnectionFailedListener impl -------------------------------------------------
+
+    @Override
+    public void onConnected(Bundle connectionHint) {
+        // Gets the best and most recent location currently available,
+        // which may be null in rare cases when a location is not available.
+        if (lastKnowLocation == null) {
+            lastKnowLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        }
+
+        if (lastKnowLocation != null) {
+            // Determine whether a Geocoder is available.
+            if (!Geocoder.isPresent()) {
+                Toast.makeText(this, R.string.no_geocoder_available, Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (addressRequested) {
+                startLookingUpAddresses();
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result) {
+        // Refer to the javadoc for ConnectionResult to see what error codes might be returned in
+        // onConnectionFailed.
+        Log.i(this.getClass().toString(), "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
+    }
+
+    @Override
+    public void onConnectionSuspended(int cause) {
+        // The connection to Google Play services was lost for some reason. We call connect() to
+        // attempt to re-establish the connection.
+        Log.i(this.getClass().toString(), "Connection suspended");
+        mGoogleApiClient.connect();
+    }
+
+
+    //    private void initLocation() {
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
+//        }
+//    }
+
+//    private void close() {
+//        // Remove the listener you previously added
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//            locationManager.removeUpdates(this);
+//        }
+//        finish();
+//    }
 
     //------------- LocationListener impl-------------------------------------------------
 
@@ -351,18 +402,5 @@ public class CreateContactActivity extends AppCompatActivity implements Connecti
 //    }
 
 
-    @Override
-    public void onConnectionFailed(ConnectionResult result) {
-        // Refer to the javadoc for ConnectionResult to see what error codes might be returned in
-        // onConnectionFailed.
-        Log.i(this.getClass().toString(), "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
-    }
 
-    @Override
-    public void onConnectionSuspended(int cause) {
-        // The connection to Google Play services was lost for some reason. We call connect() to
-        // attempt to re-establish the connection.
-        Log.i(this.getClass().toString(), "Connection suspended");
-        mGoogleApiClient.connect();
-    }
 }
