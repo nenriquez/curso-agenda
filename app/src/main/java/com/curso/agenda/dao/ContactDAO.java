@@ -131,6 +131,23 @@ public class ContactDAO {
         return db.insert(TABLE_CONTACTS, null, values);
     }
 
+    public Contact getContactBy(long id) {
+        Cursor c = db.query(TABLE_CONTACTS, new String[] {KEY_ID, KEY_NAME, KEY_PHONE, KEY_EMAIL,
+                KEY_ADDRESS, KEY_LOC_X, KEY_LOC_Y, KEY_IMG}, KEY_ID + " = ?", new String[] {String.valueOf(id)}, null, null, null);
+        if (c != null) {
+            c.moveToFirst();
+            return new Contact(
+                    c.getString(c.getColumnIndex(KEY_NAME)),
+                    c.getString(c.getColumnIndex(KEY_PHONE)),
+                    c.getString(c.getColumnIndex(KEY_EMAIL)),
+                    c.getString(c.getColumnIndex(KEY_IMG)),
+                    c.getString(c.getColumnIndex(KEY_ADDRESS)),
+                    c.getDouble(c.getColumnIndex(KEY_LOC_X)),
+                    c.getDouble(c.getColumnIndex(KEY_LOC_Y)));
+        }
+        return null;
+    }
+
     public int delete(String name, String surname) {
         return db.delete(TABLE_CONTACTS, "name = ? AND surname = ?", new String[]{name, surname});
     }

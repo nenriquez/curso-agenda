@@ -3,6 +3,7 @@ package com.curso.agenda.view;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.curso.agenda.dao.ContactDAO;
+import com.curso.agenda.model.Contact;
 import com.nico.curso.agenda.R;
 
 import java.io.File;
@@ -104,6 +107,16 @@ public class FragmentContacts extends Fragment {
                 return true;
             }
 
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Contact c = dao.getContactBy(id);
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + c.getPhone()));
+                startActivity(intent);
+            }
         });
     }
 

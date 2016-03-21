@@ -129,9 +129,6 @@ public class MainActivity extends AppCompatActivity {
         if (sectionId == R.id.nav_map) {
             fragment = FragmentMap.newInstance(getApplicationContext());
             tag = FragmentMap.TAG;
-        } else if (sectionId == R.id.nav_call) {
-            fragment = FragmentCall.newInstance(getApplicationContext());
-            tag = FragmentCall.TAG;
         } else {
             fragment = FragmentContacts.newInstance(getApplicationContext());
             tag = FragmentContacts.TAG;
